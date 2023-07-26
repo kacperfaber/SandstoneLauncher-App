@@ -5,6 +5,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import com.sandstonelauncher.di.configDi
 
 @Composable
 @Preview
@@ -16,8 +17,12 @@ fun App() {
     }
 }
 
-fun main() = application {
-    Window(onCloseRequest = ::exitApplication) {
-        App()
+fun main() {
+    configDi()
+
+    application {
+        Window(onCloseRequest = ::exitApplication) {
+            App()
+        }
     }
 }
