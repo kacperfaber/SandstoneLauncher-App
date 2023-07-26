@@ -9,7 +9,7 @@ import androidx.compose.ui.window.application
 @Composable
 @Preview
 fun App() {
-    MaterialTheme(colors = darkColors()) {
+    AppTheme {
         Scaffold {
 
         }
