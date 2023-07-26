@@ -28,8 +28,10 @@ kotlin {
         withJava()
     }
     sourceSets {
+        val jvmTest by getting
+
         val jvmMain by getting {
-            kotlin.srcDirs("build/generated/ksp/main/kotlin")
+            kotlin.srcDirs("build/generated/ksp/jvm/jvmMain/kotlin")
 
             dependencies {
                 implementation(compose.desktop.currentOs)
@@ -37,7 +39,6 @@ kotlin {
                 implementation("io.insert-koin:koin-annotations:$koinKspVersion")
             }
         }
-        val jvmTest by getting
     }
 }
 
