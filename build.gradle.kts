@@ -34,6 +34,7 @@ kotlin {
     sourceSets {
         val jvmTest by getting {
             dependencies {
+                implementation("org.jetbrains.kotlin:kotlin-test:1.9.0")
                 implementation("junit:junit:4.13.2")
                 implementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
             }
@@ -68,6 +69,7 @@ task("runProd", JavaExec::class) {
 }
 
 tasks.withType(Test::class) {
+    useJUnitPlatform()
     systemProperty(str("environment.variable.profile"), str("profile.test"))
 }
 
