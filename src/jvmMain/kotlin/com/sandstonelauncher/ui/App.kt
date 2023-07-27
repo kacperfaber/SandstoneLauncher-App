@@ -15,8 +15,14 @@ import com.sandstonelauncher.ui.components.profilelist.ProfileList
 fun App() {
     AppTheme {
         Scaffold { paddingValues ->
-            Box(Modifier.padding(paddingValues)) {
+            Row(Modifier.padding(paddingValues)) {
+                Box(Modifier.fillMaxSize().weight(.33f)) {
+                    ProfileList()
+                }
 
+                Box(Modifier.background(colorScheme.primary).fillMaxSize().weight(.67f)) {
+
+                }
             }
         }
     }
