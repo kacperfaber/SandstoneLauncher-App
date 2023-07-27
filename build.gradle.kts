@@ -1,5 +1,9 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
+fun str(settingName: String): String {
+    return project.property(settingName) as String
+}
+
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
@@ -28,7 +32,12 @@ kotlin {
         withJava()
     }
     sourceSets {
-        val jvmTest by getting
+        val jvmTest by getting {
+            dependencies {
+                implementation("junit:junit:4.13.2")
+                implementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+            }
+        }
 
         val jvmMain by getting {
             kotlin.srcDirs("build/generated/ksp/jvm/jvmMain/kotlin")
@@ -37,9 +46,29 @@ kotlin {
                 implementation(compose.desktop.currentOs)
                 implementation("io.insert-koin:koin-core:$koinVersion")
                 implementation("io.insert-koin:koin-annotations:$koinKspVersion")
+
+                implementation("com.fasterxml.jackson.core:jackson-databind:2.0.1")
             }
         }
     }
+}
+
+fun JavaExec.run(profile: String) {
+    classpath = sourceSets["main"].runtimeClasspath
+    main = "com.sandstonelauncher.MainKt"
+    systemProperty(str("environment.variable.profile"), profile)
+}
+
+task("runDev", JavaExec::class) {
+    run(str("profile.dev"))
+}
+
+task("runProd", JavaExec::class) {
+    run(str("profile.prod"))
+}
+
+tasks.withType(Test::class) {
+    systemProperty(str("environment.variable.profile"), str("profile.test"))
 }
 
 compose.desktop {
