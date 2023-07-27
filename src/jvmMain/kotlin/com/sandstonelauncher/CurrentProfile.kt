@@ -1,14 +1,22 @@
 package com.sandstonelauncher
 
+import androidx.compose.ui.text.toUpperCase
+
 enum class Profile(val value: String) {
     TEST(SharedConstants.Profiles.TEST),
     DEV(SharedConstants.Profiles.DEV),
     PROD(SharedConstants.Profiles.PROD)
 }
 
-private fun String.toProfile(): Profile = try {Profile.valueOf(this)} catch (e: IllegalArgumentException) {
-    throw Exception("$this cannot be a profile. Possible values are TEST,PROD,DEV")
+class CurrentProfile {
+    class InvalidProfileException : Exception()
+
+    companion object {
+        internal fun toProfile(profile: String): Profile = try {Profile.valueOf(profile.uppercase())} catch (e: IllegalArgumentException) {
+            throw InvalidProfileException()
+        }
+    }
 }
 
 val currentProfile: Profile
-    get() = System.getProperty(SharedConstants.EnvVar.CURRENT_PROFILE).toProfile()
+    get() = CurrentProfile.toProfile(System.getProperty(SharedConstants.EnvVar.CURRENT_PROFILE))
