@@ -37,6 +37,9 @@ kotlin {
                 implementation("org.jetbrains.kotlin:kotlin-test:1.9.0")
                 implementation("junit:junit:4.13.2")
                 implementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+
+                // ** MOCKITO **
+                implementation("org.mockito.kotlin:mockito-kotlin:5.0.0")
             }
         }
 
