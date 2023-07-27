@@ -5,5 +5,6 @@ data class LauncherProfile(
         var gameDir: String,
         var javaDir: String,
         var javaArgs: String,
-        var resolution: Resolution
+        var resolution: Resolution,
+        var lastVersionId: String
 )
