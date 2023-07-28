@@ -7,5 +7,5 @@ data class MinecraftGameVersion(
     val type: String,
     val url: String,
     val time: String,
-    val releaseTime: LocalDateTime
+    val releaseTime: String
 )

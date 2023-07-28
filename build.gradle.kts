@@ -53,6 +53,7 @@ kotlin {
                 implementation("io.insert-koin:koin-annotations:$koinKspVersion")
 
                 implementation("com.fasterxml.jackson.core:jackson-databind:2.0.1")
+                implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8")
 
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
                 implementation("io.ktor:ktor-client-cio:$ktorVersion")
