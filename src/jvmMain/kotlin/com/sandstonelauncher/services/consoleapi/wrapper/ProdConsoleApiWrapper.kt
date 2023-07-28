@@ -16,4 +16,8 @@ class ProdConsoleApiWrapper : ConsoleApiWrapper {
     override suspend fun deleteProfile(name: String) {
         TODO("Not yet implemented")
     }
+
+    override suspend fun updateProfile(launcherProfile: LauncherProfile) {
+        TODO("Not yet implemented")
+    }
 }

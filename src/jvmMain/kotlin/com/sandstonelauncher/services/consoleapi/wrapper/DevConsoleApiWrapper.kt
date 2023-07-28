@@ -20,4 +20,8 @@ class DevConsoleApiWrapper : ConsoleApiWrapper {
     override suspend fun deleteProfile(name: String) {
         profiles = profiles.filter { it.name != name }.toMutableList()
     }
+
+    override suspend fun updateProfile(launcherProfile: LauncherProfile) {
+        TODO("Not yet implemented")
+    }
 }

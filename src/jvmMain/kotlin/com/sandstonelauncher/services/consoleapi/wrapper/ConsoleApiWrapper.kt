@@ -8,4 +8,6 @@ interface ConsoleApiWrapper {
     suspend fun deleteProfile(name: String)
 
     // TODO: 3/10 commands [12:00 27-07-2023].
+
+    suspend fun updateProfile(launcherProfile: LauncherProfile)
 }
