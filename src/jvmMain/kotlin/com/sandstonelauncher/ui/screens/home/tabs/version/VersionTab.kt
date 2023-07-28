@@ -9,6 +9,13 @@ import com.sandstonelauncher.ui.components.versionlist.VersionList
 fun VersionTab() {
     val vm by remember { mutableStateOf(VersionTabViewModel()) }
 
+    /*
+    TODO: version list is too long...
+     I have two ideas:
+     - filter buttons, but I don't know where.
+     - separate to two list [installed, can be installed]
+     */
+
     LaunchedEffect(Unit) {
         vm.loadGameVersions()
     }
