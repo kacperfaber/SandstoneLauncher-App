@@ -21,6 +21,7 @@ repositories {
 
 val koinVersion = "3.4.2"
 val koinKspVersion = "1.2.2"
+val ktorVersion = "2.3.2"
 
 dependencies {
     ksp("io.insert-koin:koin-ksp-compiler:$koinKspVersion")
@@ -52,6 +53,9 @@ kotlin {
                 implementation("io.insert-koin:koin-annotations:$koinKspVersion")
 
                 implementation("com.fasterxml.jackson.core:jackson-databind:2.0.1")
+
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-cio:$ktorVersion")
             }
         }
     }
