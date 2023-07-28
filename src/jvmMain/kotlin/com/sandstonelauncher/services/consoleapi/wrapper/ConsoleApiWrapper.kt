@@ -10,4 +10,6 @@ interface ConsoleApiWrapper {
     // TODO: 3/10 commands [12:00 27-07-2023].
 
     suspend fun updateProfile(launcherProfile: LauncherProfile)
+
+    suspend fun getInstalledVersions(): List<String>
 }

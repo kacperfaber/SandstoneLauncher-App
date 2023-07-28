@@ -13,4 +13,6 @@ class ConsoleApiService(private val consoleApiWrapper: ConsoleApiWrapper) {
 
     suspend fun updateProfile(launcherProfile: LauncherProfile) =
         consoleApiWrapper.updateProfile(launcherProfile)
+
+    suspend fun getInstalledVersions(): List<String> = consoleApiWrapper.getInstalledVersions()
 }

@@ -9,6 +9,12 @@ class DevConsoleApiWrapper : ConsoleApiWrapper {
         LauncherProfile("mateuszek", "%APPDATA%\\.minecraft", "C:\\Users\\kacperfaber", "", Resolution(854, 480), "1.12")
     )
 
+    private var installedVersions = mutableListOf(
+        "1.19",
+        "1.19.2",
+        "1.20"
+    )
+
     override suspend fun listProfiles(): List<LauncherProfile> {
         return profiles
     }
@@ -24,5 +30,9 @@ class DevConsoleApiWrapper : ConsoleApiWrapper {
     override suspend fun updateProfile(launcherProfile: LauncherProfile) {
         deleteProfile(launcherProfile.name)
         profiles.add(launcherProfile)
+    }
+
+    override suspend fun getInstalledVersions(): List<String> {
+        return installedVersions
     }
 }

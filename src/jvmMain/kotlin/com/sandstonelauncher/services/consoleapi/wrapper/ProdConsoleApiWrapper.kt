@@ -20,4 +20,8 @@ class ProdConsoleApiWrapper : ConsoleApiWrapper {
     override suspend fun updateProfile(launcherProfile: LauncherProfile) {
         TODO("Not yet implemented")
     }
+
+    override suspend fun getInstalledVersions(): List<String> {
+        TODO("Not yet implemented")
+    }
 }
