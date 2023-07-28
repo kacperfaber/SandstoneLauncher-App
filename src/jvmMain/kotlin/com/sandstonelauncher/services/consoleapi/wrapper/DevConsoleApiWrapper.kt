@@ -22,6 +22,7 @@ class DevConsoleApiWrapper : ConsoleApiWrapper {
     }
 
     override suspend fun updateProfile(launcherProfile: LauncherProfile) {
-        TODO("Not yet implemented")
+        deleteProfile(launcherProfile.name)
+        profiles.add(launcherProfile)
     }
 }
