@@ -1,0 +1,19 @@
+package com.sandstonelauncher.ui.screens.home.tabs.version
+
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import com.sandstonelauncher.services.gameversion.GameVersion
+import com.sandstonelauncher.services.gameversion.GameVersionService
+import org.koin.java.KoinJavaComponent
+
+class VersionTabViewModel {
+    private val gameVersionService by KoinJavaComponent.inject<GameVersionService>(GameVersionService::class.java)
+
+    var gameVersions by mutableStateOf<List<GameVersion>?>(null)
+        private set
+
+    suspend fun loadGameVersions() {
+        gameVersions = gameVersionService.getGameVersions()
+    }
+}
