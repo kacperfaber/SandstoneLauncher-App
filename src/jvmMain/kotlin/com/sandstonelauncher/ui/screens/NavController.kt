@@ -5,6 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 
 class NavController {
+    class RouterException : Exception()
+
     class BackStackEntry(val screen: Screen, val args: Map<String, String?>?)
 
     var currentScreen = mutableStateOf(Screen.Home)
@@ -42,6 +44,10 @@ class NavController {
     fun navigateUp() {
         val lastEntry = dropLastStackEntry()
         loadBackStackEntry(lastEntry)
+    }
+
+    fun requireString(key: String): String {
+        return currentArgs.value?.get(key) ?: throw RouterException()
     }
 }
 
