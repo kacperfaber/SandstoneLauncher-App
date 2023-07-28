@@ -13,49 +13,47 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.sandstonelauncher.data.LauncherProfile
 import com.sandstonelauncher.ui.screens.NavController
+import com.sandstonelauncher.ui.viewmodels.EditLauncherProfileViewModel
+import kotlinx.coroutines.launch
 
 @Composable
 private fun InputString(label: String, value: String, onValueChanged: (value: String) -> Unit) {
-    Column(Modifier.fillMaxWidth().padding(0.dp, 9.dp)) {
+    Column(Modifier.width(250.dp).padding(3.dp, 9.dp)) {
         Text(modifier = Modifier.padding(0.dp, 3.dp), text = label, style = MaterialTheme.typography.h3)
         TextField(value, onValueChanged, maxLines = 1)
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun EditProfileForm(launcherProfile: LauncherProfile) {
-    var profileName by remember { mutableStateOf(launcherProfile.name) }
-    var gameDir by remember { mutableStateOf(launcherProfile.gameDir) }
-    var javaDir by remember { mutableStateOf(launcherProfile.javaDir) }
-    var javaArgs by remember { mutableStateOf(launcherProfile.javaArgs) }
-    var lastVersionId by remember { mutableStateOf(launcherProfile.javaArgs) }
-    var resolutionW by remember { mutableStateOf(launcherProfile.resolution.width) }
-    var resolutionH by remember { mutableStateOf(launcherProfile.resolution.height) }
+private fun EditProfileForm(launcherProfile: LauncherProfile, navigateUp: () -> Unit) {
+    val coroutineScope = rememberCoroutineScope()
+    val viewModel by remember { mutableStateOf(EditLauncherProfileViewModel(launcherProfile)) }
 
-    val scrollState = rememberScrollState(0)
+    FlowRow(modifier = Modifier.fillMaxWidth()) {
+        InputString("Profile name: ", viewModel.profileName.value) { viewModel.profileName.value = it }
 
-    Column(Modifier.fillMaxSize().verticalScroll(scrollState)) {
-        InputString("Profile name: ", profileName) { profileName = it }
+        InputString("Game directory: ", viewModel.gameDir.value) { viewModel.gameDir.value = it }
 
-        InputString("Game directory: ", gameDir) { gameDir = it }
+        InputString("Java Directory: ", viewModel.javaDir.value) { viewModel.javaDir.value = it }
 
-        InputString("Java Directory: ", javaDir) { javaDir = it }
+        InputString("Java Arguments: ", viewModel.javaArgs.value) { viewModel.javaArgs.value = it }
 
-        InputString("Java Arguments: ", javaArgs) { javaArgs = it }
+        InputString("Last Version Id: ", viewModel.lastVersionId.value) { viewModel.lastVersionId.value = it }
 
-        InputString("Last Version Id: ", lastVersionId) { lastVersionId = it }
+        InputString("Resolution / Width", viewModel.resolutionW.value.toString()) { viewModel.resolutionW.value = it.toInt() }
 
-        InputString("Resolution / Width", resolutionW.toString()) { resolutionW = it.toInt() }
+        InputString("Resolution / Height", viewModel.resolutionH.value.toString()) { viewModel.resolutionH.value = it.toInt() }
+    }
 
-        InputString("Resolution / Height", resolutionH.toString()) { resolutionH = it.toInt() }
-
+    Column(Modifier.fillMaxSize()) {
         Row(Modifier.fillMaxWidth().height(50.dp), horizontalArrangement = Arrangement.End) {
-            OutlinedButton({}) {
+            OutlinedButton(navigateUp) {
                 Icon(Icons.Default.ExitToApp, "cancel", tint = Color(200, 200, 200))
                 Text("Cancel")
             }
 
-            OutlinedButton({}) {
+            OutlinedButton({coroutineScope.launch { viewModel.saveProfile(); navigateUp() }}) {
                 Icon(Icons.Default.Done, "done", tint = Color(200, 200, 200))
                 Text("Save")
             }
@@ -73,7 +71,7 @@ fun EditProfileScreen(navController: NavController) {
 
     Column(Modifier.fillMaxSize().padding(10.dp)) {
         if (viewModel.launcherProfile != null) {
-            EditProfileForm(viewModel.launcherProfile!!)
+            EditProfileForm(viewModel.launcherProfile!!, navigateUp = {navController.navigateUp()})
         } else {
             Text("ładowanie danych profilu...") // TODO: i18
         }
