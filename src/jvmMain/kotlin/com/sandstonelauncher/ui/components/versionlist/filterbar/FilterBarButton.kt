@@ -2,10 +2,7 @@ package com.sandstonelauncher.ui.components.versionlist.filterbar
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Icon
 import androidx.compose.material.OutlinedButton
@@ -29,7 +26,7 @@ fun FilterBarButton(text: String, onClick: () -> Unit, isChecked: () -> Boolean)
     OutlinedButton(
         onClick = onClick,
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = backgroundColorAnim.value),
-        modifier = Modifier.widthIn(50.dp, 200.dp).height(50.dp),
+        modifier = Modifier.height(50.dp).width(200.dp).padding(5.dp),
         interactionSource = NoAnimInteractionSource
     ) {
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {

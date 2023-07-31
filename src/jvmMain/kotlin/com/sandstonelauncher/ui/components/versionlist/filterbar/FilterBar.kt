@@ -13,19 +13,19 @@ import com.sandstonelauncher.ui.screens.home.tabs.version.VersionTabViewModel
 fun FilterBar(viewModel: VersionTabViewModel) {
     FlowRow(Modifier.fillMaxWidth().wrapContentHeight()) {
         FilterBarButton(
-            text = "Show Only Installed",
+            text = "Only Installed",
             onClick = { viewModel.showOnlyInstalledVersions = !viewModel.showOnlyInstalledVersions },
             isChecked = { viewModel.showOnlyInstalledVersions }
         )
 
         FilterBarButton(
-            text = "Show Release",
+            text = "release",
             onClick = { viewModel.showRelease = !viewModel.showRelease },
             isChecked = { viewModel.showRelease }
         )
 
         FilterBarButton(
-            text = "Show Snapshots",
+            text = "snapshot",
             onClick = { viewModel.showSnapshots = !viewModel.showSnapshots },
             isChecked = { viewModel.showSnapshots }
         )
