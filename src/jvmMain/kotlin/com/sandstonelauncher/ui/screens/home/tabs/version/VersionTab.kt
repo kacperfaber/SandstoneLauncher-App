@@ -18,7 +18,8 @@ private fun OptionalVersionList(modifier: Modifier, versions: List<GameVersion>?
         VersionList(
             modifier = modifier,
             versions = versions,
-            header = header
+            header = header,
+            onDownloadVersion = { TODO("Download Version not implemented.") }
         )
     } else {
         Row(
