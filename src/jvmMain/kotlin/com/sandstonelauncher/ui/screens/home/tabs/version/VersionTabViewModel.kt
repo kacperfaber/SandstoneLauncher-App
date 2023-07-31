@@ -13,6 +13,12 @@ class VersionTabViewModel {
     var gameVersions by mutableStateOf<List<GameVersion>?>(null)
         private set
 
+    var showOnlyInstalledVersions by mutableStateOf(true)
+
+    var showSnapshots by mutableStateOf(false)
+
+    var showRelease by mutableStateOf(true)
+
     suspend fun loadGameVersions() {
         gameVersions = gameVersionService.getGameVersions()
     }
