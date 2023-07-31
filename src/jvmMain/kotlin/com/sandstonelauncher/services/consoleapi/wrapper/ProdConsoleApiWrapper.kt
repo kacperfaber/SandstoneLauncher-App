@@ -24,4 +24,8 @@ class ProdConsoleApiWrapper : ConsoleApiWrapper {
     override suspend fun getInstalledVersions(): List<String> {
         TODO("Not yet implemented")
     }
+
+    override suspend fun installVersion(versionId: String, os: OperatingSystem) {
+        TODO("Not yet implemented")
+    }
 }

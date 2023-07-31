@@ -12,4 +12,6 @@ interface ConsoleApiWrapper {
     suspend fun updateProfile(launcherProfile: LauncherProfile)
 
     suspend fun getInstalledVersions(): List<String>
+
+    suspend fun installVersion(versionId: String, os: OperatingSystem)
 }

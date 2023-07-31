@@ -2,6 +2,7 @@ package com.sandstonelauncher.services.consoleapi.wrapper
 
 import com.sandstonelauncher.data.LauncherProfile
 import com.sandstonelauncher.data.Resolution
+import kotlinx.coroutines.delay
 
 class DevConsoleApiWrapper : ConsoleApiWrapper {
     private var profiles = mutableListOf(
@@ -34,5 +35,10 @@ class DevConsoleApiWrapper : ConsoleApiWrapper {
 
     override suspend fun getInstalledVersions(): List<String> {
         return installedVersions
+    }
+
+    override suspend fun installVersion(versionId: String, os: OperatingSystem) {
+        delay(1000L)
+        installedVersions.add(versionId)
     }
 }
