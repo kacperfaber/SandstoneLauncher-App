@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="topic.v2.xsd"  id="third-party-libs" title="Third Party Libraries">
+<chunk include-id="third-party-libs-tables">
+<chapter title="Third Party Libraries" id="Third_Party_Libraries">
+<table>
+<tr><td>Project</td><td>Version</td><td>License</td></tr>
+<tr>
+<td><a href='http://wiki.fasterxml.com/JacksonHome'>com.fasterxml.jackson.core:jackson-annotations</a></td>
+<td>2.0.1</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='http://wiki.fasterxml.com/JacksonHome'>com.fasterxml.jackson.core:jackson-core</a></td>
+<td>2.0.1</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='http://wiki.fasterxml.com/JacksonHome'>com.fasterxml.jackson.core:jackson-databind</a></td>
+<td>2.0.1</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>io.insert-koin:koin-annotations</td>
+<td>1.2.2</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://insert-koin.io/'>io.insert-koin:koin-annotations-jvm</a></td>
+<td>1.2.2</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>io.insert-koin:koin-core</td>
+<td>3.4.2</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://insert-koin.io/'>io.insert-koin:koin-core-jvm</a></td>
+<td>3.4.2</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='http://www.jetbrains.org'>org.jetbrains:annotations</a></td>
+<td>13.0</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.animation:animation</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.animation:animation-core</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.animation:animation-core-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.animation:animation-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.desktop:desktop</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.desktop:desktop-jvm</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.desktop:desktop-jvm-windows-x64</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.foundation:foundation</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.foundation:foundation-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.foundation:foundation-layout</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.foundation:foundation-layout-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.material:material</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.material:material-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.material:material-icons-core</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.material:material-icons-core-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.material:material-ripple</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.material:material-ripple-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.runtime:runtime</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.runtime:runtime-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.runtime:runtime-saveable</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.runtime:runtime-saveable-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.ui:ui</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.ui:ui-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.ui:ui-geometry</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.ui:ui-geometry-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.ui:ui-graphics</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.ui:ui-graphics-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.ui:ui-text</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.ui:ui-text-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.ui:ui-tooling-preview</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.ui:ui-tooling-preview-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.ui:ui-unit</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.ui:ui-unit-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.compose.ui:ui-util</td>
+<td>1.4.1</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/JetBrains/compose-jb'>org.jetbrains.compose.ui:ui-util-desktop</a></td>
+<td>1.4.1</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='https://kotlinlang.org/'>org.jetbrains.kotlin:kotlin-stdlib</a></td>
+<td>1.8.21</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='https://kotlinlang.org/'>org.jetbrains.kotlin:kotlin-stdlib-common</a></td>
+<td>1.8.21</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='https://kotlinlang.org/'>org.jetbrains.kotlin:kotlin-stdlib-jdk7</a></td>
+<td>1.8.21</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='https://kotlinlang.org/'>org.jetbrains.kotlin:kotlin-stdlib-jdk8</a></td>
+<td>1.8.21</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.kotlinx:atomicfu</td>
+<td>0.17.0</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/Kotlin/kotlinx.atomicfu'>org.jetbrains.kotlinx:atomicfu-jvm</a></td>
+<td>0.17.0</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.kotlinx:kotlinx-coroutines-bom</td>
+<td>1.6.4</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td>org.jetbrains.kotlinx:kotlinx-coroutines-core</td>
+<td>1.6.4</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://github.com/Kotlin/kotlinx.coroutines'>org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm</a></td>
+<td>1.6.4</td>
+<td><a href='https://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache Software License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>org.jetbrains.skiko:skiko</td>
+<td>0.7.63</td>
+<td>No license information found</td>
+</tr>
+<tr>
+<td><a href='https://www.github.com/JetBrains/skiko'>org.jetbrains.skiko:skiko-awt</a></td>
+<td>0.7.63</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td><a href='https://www.github.com/JetBrains/skiko'>org.jetbrains.skiko:skiko-awt-runtime-windows-x64</a></td>
+<td>0.7.63</td>
+<td><a href='http://www.apache.org/licenses/LICENSE-2.0.txt'>The Apache License, Version 2.0</a></td>
+</tr>
+</table>
+</chapter>
+</chunk>
+</topic>

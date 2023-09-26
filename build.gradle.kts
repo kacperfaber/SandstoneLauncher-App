@@ -1,4 +1,5 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import com.github.jk1.license.render.*
 
 fun str(settingName: String): String {
     return project.property(settingName) as String
@@ -8,6 +9,7 @@ plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
     id("com.google.devtools.ksp").version("1.8.20-1.0.10")
+    id("com.github.jk1.dependency-license-report").version("2.5")
 }
 
 group = "com.sandstonelauncher"
@@ -24,6 +26,13 @@ val koinKspVersion = "1.2.2"
 
 dependencies {
     ksp("io.insert-koin:koin-ksp-compiler:$koinKspVersion")
+}
+
+licenseReport {
+    outputDir = "$projectDir/licenses"
+    configurations = arrayOf("runtimeClasspath")
+    renderers = arrayOf(XmlReportRenderer("third-party-libs.xml", "Third Party Libraries"))
+
 }
 
 kotlin {
